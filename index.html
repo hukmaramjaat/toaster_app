@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toast Popup</title>
+    <link href="./output.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="m-0 text-center relative h-screen w-screen overflow-hidden">
+    <main>
+      <h1 class="text-3xl font-bold">Toast Popup</h1>
+      <div class="flex flex-col gap-4 max-w-[400px] mx-auto mt-4">
+        <select class="p-2 border-2 border-gray-500" id="horizontal-position">
+          <option value="left">Left</option>
+          <option value="right">Right</option>
+        </select>
+        <select class="p-2 border-2 border-gray-500" id="vertical-position">
+          <option value="top">top</option>
+          <option value="bottom">Bottom</option>
+        </select>
+        <select class="p-2 border-2 border-gray-500" id="toast-type">
+          <option value="success">Success</option>
+          <option value="error">Error</option>
+          <option value="warning">Warning</option>
+          <option value="info">Info</option>
+        </select>
+        <input
+          class="p-2 border-2 border-gray-500"
+          type="text"
+          id="toast-message"
+          value="This is a toast message!"
+        />
+        <div class="duration-container flex items-center">
+          <label class="mr-1" for="duration">Duration</label>
+          <input class="flex-1" type="range" id="duration" min="2" max="10" />
+        </div>
+        <button class="show-toast border p-2 border-gray-400 bg-gray-200">
+          Show Toast
+        </button>
+      </div>
+    </main>
+    <div class="toast-container absolute my-3 mx-4"></div>
+  </body>
+</html>
